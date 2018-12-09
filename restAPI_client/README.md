@@ -5,7 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Run locally
 
 * Open cmd in restAPI_client directory
-* Run `ng serve --host 0.0.0.0 --port=4200` for a dev server. Navigate to `http://localhost:4200/`.
+* Run: `ng serve --host 0.0.0.0 --port=4200` 
+* Navigate to `http://localhost:4200/`
 
 ## Run with Docker
 
