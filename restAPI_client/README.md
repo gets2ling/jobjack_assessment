@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Run locally
 
-* Open cmd in restAPI_client directory
+* Open Node.js Command Prompt in restAPI_client directory
 * Run: npm install
 * Run: npm install -g @angular/cli@6.0.0
 * Run: npm install --save-dev @angular-devkit/build-angular
