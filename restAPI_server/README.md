@@ -12,3 +12,5 @@ $ docker build -t restapi-server
 
 Run Docker container:
 $ docker run -p 8081:8081 restapi-server
+
+Not sure how to serve a local file from a container for testing purposes
