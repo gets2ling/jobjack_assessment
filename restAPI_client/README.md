@@ -6,6 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 * Open cmd in restAPI_client directory
 * Run: npm install
+* Run: npm install -g @angular/cli@6.0.0
 * Run: `ng serve --host 0.0.0.0 --port=4200` 
 * Navigate to `http://localhost:4200/`
 
