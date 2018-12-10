@@ -16,3 +16,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Open cmd in restAPI_client directory
 * Run: docker build -t restapi-client .
 * Run: docker run -it -v cd:/usr/src/app -v /usr/src/app/node_modules --rm restapi-client
+  * If localhost request fails (Change port):
+    * Run: docker run -it -p 4201:4200 -v cd:/usr/src/app -v /usr/src/app/node_modules --rm restapi-client
