@@ -15,7 +15,7 @@ function FileStat (pathFull) {
     fs.stat(pathFull, function(err, stats) {
 
     if (err) {
-        return self.emit('error', err);
+        self.emit('error', err);
         self.emit('end');
     }
 
