@@ -16,6 +16,7 @@ function FileStat (pathFull) {
 
     if (err) {
         return self.emit('error', err);
+        self.emit('end');
     }
 
     else if (stats.isFile){
@@ -56,6 +57,10 @@ function ReadStream (directory) {
 
              fileStat.on('data', function (chunk) {  
                 self.emit('data', chunk);          
+            });
+            
+             fileStat.on('error', function (err) {  
+                console.log("filepath: '"+err.path+ "' has error code: " +err.code);          
             });
 
             fileStat.on('end', () => {filelen -= 1;
