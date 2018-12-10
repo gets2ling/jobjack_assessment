@@ -18,15 +18,14 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     document.getElementById("select").style.display = "none";
     document.getElementById("file").style.display = "none";
+    document.getElementById('attribute-list').style.display = "none";
+    document.getElementById('error').style.display = "none";
   }
 
   public onClick(event) {
     let Directory = document.querySelector('input').value;
     this.restItemsUrl = 'http://localhost:8081/directory?dir='+Directory;
     this.getRestItems();
-    document.getElementById("select").style.display = "inline";
-    document.getElementById("file").style.display = "block";
-
   }
 
   // Read all REST Items
@@ -36,6 +35,18 @@ export class AppComponent implements OnInit {
         restItems => {
           this.restItems = restItems;
           console.log(this.restItems);
+          
+          if(this.restItems.filename === "error"){
+            document.getElementById("select").style.display = "none";
+            document.getElementById("file").style.display = "none";
+            document.getElementById('attribute-list').style.display = "none";
+            document.getElementById('error').style.display = "inline";
+          }else{
+            document.getElementById("select").style.display = "inline";
+            document.getElementById("file").style.display = "block";
+            document.getElementById('attribute-list').style.display = "inline";
+            document.getElementById('error').style.display = "none";
+          }
 
           var options = "";
           var key = ""
