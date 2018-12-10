@@ -26,6 +26,12 @@ export class AppComponent implements OnInit {
   public onClick(event) {
     let Directory = document.querySelector('input').value;
     this.restItemsUrl = 'http://localhost:8081/directory?dir='+Directory;
+    
+    document.getElementById("select").style.display = "none";
+    document.getElementById("file").style.display = "none";
+    document.getElementById('attribute-list').style.display = "none";
+    document.getElementById('error').style.display = "none";
+    
     this.getRestItems();
   }
 
@@ -45,7 +51,6 @@ export class AppComponent implements OnInit {
           }else{
             document.getElementById("select").style.display = "inline";
             document.getElementById("file").style.display = "block";
-            document.getElementById('attribute-list').style.display = "inline";
             document.getElementById('error').style.display = "none";
           }
 
@@ -71,6 +76,8 @@ export class AppComponent implements OnInit {
     for(key in this.restItems){
       if(this.restItems[key].filename == selected){
         this.selectedItems = this.restItems[key];
+        
+        document.getElementById('attribute-list').style.display = "inline";
 
         document.getElementById('attribute-list').innerHTML = ''
           for (var att in this.selectedItems) {
