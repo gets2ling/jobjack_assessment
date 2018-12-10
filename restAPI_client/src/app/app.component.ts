@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     document.getElementById("file").style.display = "none";
     document.getElementById('attribute-list').style.display = "none";
     document.getElementById('error').style.display = "none";
+    console.log("file read error");
   }
 
   public onClick(event) {
