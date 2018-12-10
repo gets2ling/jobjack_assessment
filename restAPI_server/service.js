@@ -26,7 +26,7 @@ exports.directoryRequest = function (req, res) {
             console.log("filepath: '"+err.path+ "' has error code: " +err.code);
             
             var response = {
-                "file_error": "filepath: '"+err.path+ "' has error code: " +err.code
+                "filename": "error"
             }
 
             res.statusCode = 200;
